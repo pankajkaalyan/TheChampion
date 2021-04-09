@@ -1,0 +1,93 @@
+Before Running this app :
+1. change the gmail credentials in properties file.
+2. Enable less secure functionality of gamil.
+
+##################################################### 
+
+
+1. For Submit a participant request
+
+(POST) localhost:8080/league/v1/participation 
+
+(BODY) : 
+
+{
+	"participantName" : "Brayan",
+	"participantCountry" : "HK",
+	"participantAge" : 25,
+	"email" : "pankajkaalyan@gmail.com"
+}
+
+-------------------------------------------------
+
+2. For getting all participations
+
+(GET) localhost:8080/league/v1/participation
+
+-------------------------------------------------
+
+3. For getting a specific participations
+
+(GET) localhost:8080/league/v1/participation/{participantId}
+
+example : localhost:8080/league/v1/participation/1617913901208
+-------------------------------------------------
+
+4. For creating groups of participants
+
+(GET) localhost:8080/league/v1/participation/groups/{numberOfParticipantsInSingleGroup}
+
+example : localhost:8080/league/v1/participation/groups/4
+-------------------------------------------------
+
+5. For getting groups of participants
+
+(GET) localhost:8080/league/v1/participation/groups
+
+-------------------------------------------------
+
+6. For getting all first round matches of league.
+
+(GET) localhost:8080/league/v1/participation/matches
+
+-------------------------------------------------
+
+7. For getting all match results ..
+
+(GET) localhost:8080/league/v1/participation/results
+
+-------------------------------------------------
+
+8. For getting a specific match result ..
+
+(GET) localhost:8080/league/v1/participation/results/{matchId}
+
+example: localhost:8080/league/v1/participation/result/c2fa11fc-e72d-4099-9215-fffbbe2c2a71
+
+-------------------------------------------------
+
+9. For getting a specific match result ..
+
+(GET) localhost:8080/league/v1/participation/results/{matchId}
+
+example: localhost:8080/league/v1/participation/result/c2fa11fc-e72d-4099-9215-fffbbe2c2a71
+
+-------------------------------------------------
+
+10. For getting a winner of league ..
+	Winner can be declared only when all matches of first round has been played.
+	
+	In this functionality, a mail will be sent to the winner's email Id.
+
+(GET) localhost:8080/league/v1/participation/winner
+
+example: localhost:8080/league/v1/participation/winner
+
+
+
+
+
+ 
+
+
+
